@@ -10,7 +10,7 @@ print('''
     ╚█████╔╝███████╗██║  ╚█████╔╝██║░░██║███████╗╚█████╔╝╚██████╔╝███████╗██║░░██║░░░██║░░░╚█████╔╝██║░░██║
     ░╚════╝░╚══════╝╚═╝  ░╚════╝░╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝\u001b[0m
         # Made by \u001b[37;1mSrcyDev\u001b[0m (https://github.com/SrcyDev/)
-	    # Project: \u001b[37;1mCLI Calculator Python \u001b[0m (https://github.com/SrcyDev/CLI-Calculator-Python/)
+	# Project: \u001b[37;1mCLI Calculator Python \u001b[0m (https://github.com/SrcyDev/CLI-Calculator-Python/)
 ''')
 def add(x, y):
     z= x + y
