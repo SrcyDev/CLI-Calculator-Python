@@ -2,6 +2,7 @@
 from math import pow,sqrt
 from os import system
 from time import sleep
+
 system("")
 print('''
     \u001b[33m░█████╗░██╗░░░░░██╗  ░█████╗░░█████╗░██╗░░░░░░█████╗░██╗░░░██╗██╗░░░░░░█████╗░████████╗░█████╗░██████╗░
@@ -13,37 +14,51 @@ print('''
         # Made by \u001b[37;1mSrcyDev\u001b[0m (https://github.com/SrcyDev/)
 	# Project: \u001b[37;1mCLI Calculator Python \u001b[0m (https://github.com/SrcyDev/CLI-Calculator-Python/)
 ''')
-def add(x, y):
+def add():
+    x = int(input("\u001b[35;1mEnter first number: "))
+    y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
     z = x + y
     z = str(z)
     print("\u001b[32;1mThe result is: " + z)
 
-def sub(x, y):
+def sub():
+    x = int(input("\u001b[35;1mEnter first number: "))
+    y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
     z = x - y
     z = str(z)
     print("\u001b[32;1mThe result is: " + z)
 
-def multiply(x,y):
+def multiply():
+    x = int(input("\u001b[35;1mEnter first number: "))
+    y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
     z = x * y
     z = str(z)
     print("\u001b[32;1mThe result is: " + z)
 
-def division(x,y):
+def division():
+    x = int(input("\u001b[35;1mEnter first number: "))
+    y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
     z = x / y
     z = str(z)
     print("\u001b[32;1mThe result is: " +  z)
 
-def mod(x,y):
+def mod():
+    x = int(input("\u001b[35;1mEnter first number: "))
+    y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
     z = x % y
     z = str(z)
     print("\u001b[32;1mThe result is: " + z)
 
-def percent(x,y):
+def percent():
+    x = int(input("\u001b[35;1mEnter first number: "))
+    y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
     z = x * y /100
     z = str(z)
     print("\u001b[32;1mThe result is: " + z)
 
-def power(x,y):
+def power():
+    x = int(input("\u001b[35;1mEnter base: "))
+    y = int(input("\u001b[34;1mEnter exponent:  "+"\u001b[0m"))
     z = pow(x,y)
     if z != int(z):
         print("\u001b[32;1mThe result is: " + str(z))
@@ -51,8 +66,8 @@ def power(x,y):
         z = int(z)
         print("\u001b[32;1mThe result is: " + str(z))
     
-
-def sqroot(x):
+def sqroot():
+    x = int(input("\u001b[35;1mEnter number: \u001b[0m"))
     z = sqrt(x)
     if z != int(z):
         print("\u001b[32;1mThe result is: " + str(z))
@@ -60,69 +75,62 @@ def sqroot(x):
         z = int(z)
         print("\u001b[32;1mThe result is: " + str(z))
     
+def h():
+    print("\u001b[31;1mAddition: + : For adding two values.")
+    print("\u001b[32;1mSubtraction: - : For subtracting two values.")
+    print("\u001b[33;1mMultiplication: * : For multiplying two values.")
+    print("\u001b[34;1mDivision: / : For dividing two values.")
+    print("\u001b[35;1mModulus: _ : For finding the Remainder/Modulus of a value.")
+    print("\u001b[36;1mPercentage: % : For finding percentage of a value.")
+    print("\u001b[37;1mPower: ^ : For finding the Exponent of values.")
+    print("\u001b[31mSquare Root: !  : For finding square root of a single value.")
+    print("\u001b[32;1mHelp: h : Shows this page.")
+    print("\u001b[33;1mClear Screen: c : To clear the screen")
 
-def main():
+def c():
+    system("cls||clear")
+
+def display():
     print("\u001b[61;1mEnter your operator as follows: \u001b[0m")
     print("\u001b[31;1mAddition: +")
     print("\u001b[32;1mSubtraction: -")
     print("\u001b[33;1mMultiplication: *")
     print("\u001b[34;1mDivision: /")
-    print("\u001b[35;1mModulus: \/")
+    print("\u001b[35;1mModulus: _")
     print("\u001b[36;1mPercentage: %")
     print("\u001b[37;1mPower: ^")
     print("\u001b[31mSquare Root: !")
     print("\u001b[32;1mHelp: h")
     print("\u001b[33;1mClear Screen: c")
+
+def main():
+    display()
     opt = str(input("\u001b[32;1m> \u001b[0m")).lower()
     if opt == "+":
-        x = int(input("\u001b[35;1mEnter first number: "))
-        y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
-        add(x,y)
+        add()
     elif opt == "-":
-        x = int(input("\u001b[35;1mEnter first number: "))
-        y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
-        sub(x,y)
+        sub()
     elif opt == "*":
-        x = int(input("\u001b[35;1mEnter first number: "))
-        y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
-        multiply(x,y)
+        multiply()
     elif opt == "/":
-        x = int(input("\u001b[35;1mEnter first number: "))
-        y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
-        division(x,y)
-    elif opt == "\/":
-        x = int(input("\u001b[35;1mEnter first number: "))
-        y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
-        mod(x,y)
+        division()
+    elif opt == "_":
+        mod()
     elif opt == "%":
-        x = int(input("\u001b[35;1mEnter first number: "))
-        y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
-        percent(x,y)
+        percent()
     elif opt == "^":
-        x = int(input("\u001b[35;1mEnter first number: "))
-        y = int(input("\u001b[34;1mEnter second number:  "+"\u001b[0m"))
-        power(x,y)
+        power()
     elif opt == "!":
-        x = int(input("\u001b[35;1mEnter number: \u001b[0m"))
-        sqroot(x)
+        sqroot()
     elif opt == "c":
-        system("cls||clear")
+        c()
         sleep(1)
     elif opt == "h":
+        h()
         sleep(0.7)
-        print("\u001b[31;1mAddition: + : For adding two values.")
-        print("\u001b[32;1mSubtraction: - : For subtracting two values.")
-        print("\u001b[33;1mMultiplication: * : For multiplying two values.")
-        print("\u001b[34;1mDivision: / : For dividing two values.")
-        print("\u001b[35;1mModulus: \ : For finding the Remainder/Modulus of a value.")
-        print("\u001b[36;1mPercentage: % : For finding percentage of a value.")
-        print("\u001b[37;1mPower: ^ : For finding the Exponent of values.")
-        print("\u001b[31mSquare Root: !  : For finding square root of a single value.")
-        print("\u001b[32;1mHelp: h : Shows this page.")
-        print("\u001b[33;1mClear Screen: c : To clear the screen")
     else:
         print("\u001b[31mInvalid Operator passed. \u001b[31;1mPlease try again. (Note: Using spaces before or after the operator may trigger this.) \u001b[0m")
-
+        sleep(0.7)
     
 def asked():
     print("\u001b[36mDo you want to continue ([Y]es/[N]o) ?: ")
